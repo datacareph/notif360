@@ -74,7 +74,7 @@ git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz
 git push origin my-amazing-contribution
 ```
 
-4. Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch. Click the "Compare & pull request" button to create a pull request. Provide a descriptive title and explanation of your changes, then submit the pull request.
+4. Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
 
 - 
 ## :scroll: License
