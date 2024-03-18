@@ -59,4 +59,4 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 
 ## :scroll: License
 
-[GNU GPLv3](LICENSE) © [DataCarePh](https://github.com/datacareph/)
+[MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
