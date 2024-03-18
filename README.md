@@ -35,7 +35,7 @@ cd notif360
 ### Copy 'env.sample' to '.env' and replace values accordingly
 
 ```sh
-cp env.sample .env
+cp env.example .env
 nano .env
 ```
 
