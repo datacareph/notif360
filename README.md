@@ -62,14 +62,17 @@ Please contribute using [Github Flow](https://guides.github.com/introduction/flo
 git clone https://github.com/your-username/notif360.git
 cd notif360
 git checkout -b my-amazing-contribution
-git add .
-git commit -m "Description of your changes"
+# Add your amazing feature
+git add -A
+git commit -m "Commiting my amazing contribution"
+# Get the token here https://github.com/settings/tokens
+git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
 git push origin my-amazing-contribution
 ```
+
 - Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch. Click the "Compare & pull request" button to create a pull request. Provide a descriptive title and explanation of your changes, then submit the pull request.
 
-git clone https://github.com/your-username/notif360.git
-
+- 
 ## :scroll: License
 
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
