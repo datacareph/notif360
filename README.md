@@ -16,19 +16,13 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### First if OpenSSL and cURL are installed
 
-Before installing this Readme Generator you need to check if you have `cURL`and `OpenSSL` installed in your computer.
+Before installing this Readme Generator you need to check if you have `cURL`and `OpenSSL` installed in your computer system.
 
 To check if you have `cURL` and `OpenSSL` installed, run this command in your terminal:
 
 ```sh
-openssl -v
-curl -v
-```
-
-### To be replace
-
-```sh
-
+openssl version
+curl --version
 ```
 
 ## :rocket: Usage
@@ -38,12 +32,16 @@ git clone https://github.com/datacareph/notif360.git
 cd notif360
 ```
 
-Then, you can modify the content of your readme.
+### Copy 'env.sample' to '.env' and replace values accordingly
 
+```sh
+cp env.sample .env
+nano .env
+```
 
 ### Tips
 
-Here are a few tips to make them more beautiful!
+We will gradually update this readme file. Stay connected.
 
 ### Screenshot with Flameshot
 
