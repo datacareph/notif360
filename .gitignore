@@ -1,0 +1,93 @@
+# Ignore operating system and IDE generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.pem
+
+# Ignore build artifacts and compiled code
+node_modules/
+build/
+# dist/
+*.log
+*.tmp
+.pnpm-store
+
+# Ignore package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore environment-specific files
+# .env
+.env.local
+.env.*.local
+
+# Ignore dependency directories
+bower_components/
+jspm_packages/
+
+# Ignore configuration files
+# *.conf
+# *.config
+
+# Ignore system and backup files
+*.swp
+*~
+*.bak
+*.backup
+
+# Ignore user-specific files
+*.sublime-workspace
+
+# Ignore database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Ignore editor backup files
+*.swo
+*.swn
+*.swm
+*.swo
+*.swp
+
+# Ignore node.js debug logs
+node_modules/debug.log
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# next.js
+.next/
+next-env.d.ts
+
+# Composer
+#vendor/
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# database
+/prisma/db.sqlite
+/prisma/db.sqlite-journal
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Ignore custom folders or files
+custom_folder/
+custom_file.ext
+
+# Ignore all files and directories named '*-updated'
+*-updated
+
+# Disable pdisk folder
+pdisk/
+
