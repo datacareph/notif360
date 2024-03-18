@@ -1,0 +1,19 @@
+# Cron Job (crontab) - a scheduler tool
+# Commands format see@ https://crontab.guru/#*_*_*_*_*
+# m h  dom mon dow   command
+
+# Test run and prod
+# * * * * * echo "$(date '+%Y/%m/%d %H:%M:%S') - Cron job is invoking every minute." >> /dev/stdout 2>&1
+@reboot echo "$(date '+%Y/%m/%d %H:%M:%S') - Notif360 cron job is running." >> /dev/stdout 2>&1
+
+# Monitoring System
+# Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
+
+# Full scan with force notification: Run the script every 15 days at 9:00 AM
+0 9 */15 * * /bin/bash /opt/datacareph/notif360/run.sh yes no no >> /dev/stdout 2>&1
+
+# Website and Malware Scan and Disk check: Run the script every day at 10:00 AM
+0 10 * * * /bin/bash /opt/datacareph/notif360/run.sh no no no >> /dev/stdout 2>&1
+
+# Website Check Only: Run the script every 5 minutes
+*/5 * * * * /bin/bash /opt/datacareph/notif360/run.sh no yes yes >> /dev/stdout 2>&1
