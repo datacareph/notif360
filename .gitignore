@@ -19,7 +19,7 @@ yarn.lock
 pnpm-lock.yaml
 
 # Ignore environment-specific files
-# .env
+.env
 .env.local
 .env.*.local
 

@@ -14,7 +14,7 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ## :package: Installation
 
-### First if OpenSSL and cURL are installed
+### Requirements
 
 Before installing this Readme Generator you need to check if you have `cURL`and `OpenSSL` installed in your computer system.
 
@@ -38,6 +38,24 @@ cd notif360
 cp env.sample .env
 nano .env
 ```
+
+You may need the following
+- SMTP Credentials
+- SLACK URI Endpoint
+- VirusTotal API
+- Domains to check (SSL Check)
+- URLs to check and scan
+
+### Test it
+```sh
+    ./run.sh yes no no
+```
+
+### Add this into Cronjob
+```sh
+sudo crontab -e
+```
+Check these [schedules](https://github.com/datacareph/notif360/blob/main/20-scheduler)
 
 ### Tips
 
