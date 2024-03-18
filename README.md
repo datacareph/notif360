@@ -48,14 +48,29 @@ You may need the following
 
 ### Test it
 ```sh
-    ./run.sh yes no no
+./run.sh yes no no
 ```
 
 ### Add this into Cronjob
 ```sh
 sudo crontab -e
 ```
-Check these [schedules](https://github.com/datacareph/notif360/blob/main/20-scheduler)
+
+```
+# Monitoring System
+# Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
+
+# Full scan with force notification: Run the script every 15 days at 9:00 AM
+0 9 */15 * * /bin/bash /opt/datacareph/notif360/run.sh yes no no
+
+# Website and Malware Scan and Disk check: Run the script every day at 10:00 AM
+0 10 * * * /bin/bash /opt/datacareph/notif360/run.sh no no no
+
+# Website Check Only: Run the script every 5 minutes
+*/5 * * * * /bin/bash /opt/datacareph/notif360/run.sh no yes yes
+```
+
+Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/20-scheduler) in the docker container.
 
 ### Tips
 
