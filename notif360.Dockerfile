@@ -40,8 +40,11 @@ RUN set -x \
     && chown $USER:$GROUP /home/$USER \
     && mkdir -p /opt/datacareph/notif360
 
+# Copy all files
+COPY ./ /opt/datacareph/notif360
+
 # Copy notif360 job file and set ownership
-COPY ./pdisk/notif360/20-scheduler /etc/crontabs/root
+COPY ./20-scheduler /etc/crontabs/root
 
 # Altered on docker compose
 RUN set -x \
