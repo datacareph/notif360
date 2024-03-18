@@ -55,7 +55,20 @@ Please [open an issue](https://github.com/datacareph/notif360/issues/new) for su
 
 ## :memo: Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/datacareph/notif360/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/datacareph/notif360/compare/). Or simply
+-  Fork the Repository under your GitHub account.
+-  Clone your forked repo and do this commands
+```sh
+git clone https://github.com/your-username/notif360.git
+cd notif360
+git checkout -b my-amazing-contribution
+git add .
+git commit -m "Description of your changes"
+git push origin my-amazing-contribution
+```
+- Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch. Click the "Compare & pull request" button to create a pull request. Provide a descriptive title and explanation of your changes, then submit the pull request.
+
+git clone https://github.com/your-username/notif360.git
 
 ## :scroll: License
 
