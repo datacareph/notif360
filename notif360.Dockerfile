@@ -2,7 +2,7 @@ FROM alpine:3.19.1
 
 LABEL maintainer="DataCarePh Containerized <esstat17@gmail.com>"
 LABEL version="alpine-dcph-3.19.1"
-LABEL description="Security information and event management (SIEM) using cron jobs"
+LABEL description="A simple and lightweight system monitoring and notification tool designed to provide comprehensive insight of system metrics and website health."
 
 # Arguments defined in docker-compose.yml
 ARG uid gid
@@ -41,10 +41,10 @@ RUN set -x \
     && mkdir -p /opt/datacareph/notif360
 
 # Copy all files
-COPY ./pdisk/notif360 /opt/datacareph/notif360
+COPY ./notif360 /opt/datacareph/notif360
 
 # Copy notif360 job file and set ownership
-COPY ./20-scheduler /etc/crontabs/root
+COPY ./notif360/20-scheduler /etc/crontabs/root
 
 # Altered on docker compose
 RUN set -x \
