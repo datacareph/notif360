@@ -16,9 +16,9 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### Requirements
 
-Before installing this Readme Generator you need to check if you have `cURL`and `OpenSSL` installed in your computer system.
+There are few requirements that may also available on your current unix system, 'cURL' and 'OpenSSL' installed in your computer system.
 
-To check if you have `cURL` and `OpenSSL` installed, run this command in your terminal:
+To check if you have 'cURL' and 'OpenSSL' installed, run this command in your terminal:
 
 ```sh
 openssl version
@@ -35,6 +35,7 @@ cd notif360
 ### Copy 'env.sample' to '.env' and replace values accordingly
 
 ```sh
+cd ./pdisk/notif360/
 cp env.example .env
 nano .env
 ```
