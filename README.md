@@ -1,8 +1,8 @@
 # Notif360 ![bash](https://img.shields.io/badge/language-bash-green.svg) ![docker](https://img.shields.io/badge/Docker-notif360.Dockerfile-blue)
 
-> System monitoring and notifications
+> Made with love ![Philippines](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/ph.png "Philippines")
 
-A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics, website health, and malware scanning.
+A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics website health, and malware scanning.
 
 ![Welcome](https://imgur.com/Ci139ot.png)
 
@@ -15,7 +15,7 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 - [Support](#hammer_and_wrench-support)
 - [Contributing](#memo-contributing)
 - [License](#scroll-license)
-
+- [Resources](#bookmark-resources)
 ## :package: Installation
 
 ### Requirements
@@ -36,7 +36,7 @@ git clone https://github.com/datacareph/notif360.git
 cd notif360
 ```
 
-### Copy 'env.sample' to '.env' and replace values accordingly
+### Copy `env.sample` to `.env` and replace values accordingly
 
 ```sh
 cd ./notif360/
@@ -47,8 +47,8 @@ nano .env
 You may need the following
 - Domains to check (SSL Check)
 - URLs to check and scan
-- SMTP Credentials. You can use your existing or [contact us](https://www.datacareph.com/contact).
-- SLACK URI Endpoint
+- SMTP Credentials. You can use your existing credentials or [contact us](https://www.datacareph.com/contact).
+- SLACK URL Endpoint
 - VirusTotal. [Get API Key here](https://www.virustotal.com/gui/my-apikey)
 
 ### Test it
@@ -117,9 +117,9 @@ Here's the feature-rich functionality that this script can provide.
 - **Extensibility:** Provides extensibility options for adding new monitoring checks or integrating with third-party tools and services.
 
 ## :space_invader: Future
-TO-DO list and additional features
+TO-DO list and additional features:
 - Discord notification integration
-- Connectivity and network monitoring
+- Network monitoring
 
 ## :hammer_and_wrench: Support
 
@@ -162,3 +162,8 @@ Or alternatively click 'Compare & pull request' see screenshot
 ## :scroll: License
 
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
+
+## :bookmark: Resources
+- [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
+- [Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
+- [Screenshot App](https://github.com/flameshot-org/flameshot)
