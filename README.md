@@ -4,7 +4,7 @@
 
 A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics and website health.
 
-![HeroBanner](notif360-hero-banner.png)
+![Welcome](https://imgur.com/a/F6qYOsd.svg)
 
 ## :books: Table of Contents
 
@@ -45,8 +45,8 @@ nano .env
 You may need the following
 - Domains to check (SSL Check)
 - URLs to check and scan
-- SMTP Credentials (You can use your existing or contact us.)
-- SLACK URI Endpoint 
+- SMTP Credentials. You can use your existing or [contact us.](https://www.datacareph.com/contact)
+- SLACK URI Endpoint
 - VirusTotal. [Get API Key here](https://www.virustotal.com/gui/my-apikey)
 
 ### Test it
