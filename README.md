@@ -2,7 +2,7 @@
 
 > System monitoring and notifications
 
-A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics and website health.
+A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics, website health, and malware scanning.
 
 ![Welcome](https://imgur.com/Ci139ot.png)
 
@@ -20,9 +20,9 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### Requirements
 
-There are few requirements that may also available on your current Unix-like operating system, `cURL` and `OpenSSL` installed in your computer system.
+There are a few requirements that may already be available on your current Unix-like operating system: `cURL` and `OpenSSL`, which need to be present on your computer system.
 
-To check if you have these requirements installed, run this command in your `CLI`:
+To check if you have these components installed, you can run a simple command in your command-line interface (`CLI`):
 
 ```sh
 openssl version
@@ -118,7 +118,7 @@ Here's the feature-rich functionality that this script can provide.
 
 ## :space_invader: Future
 TO-DO list and additional features
-- Discord notification option
+- Discord notification integration
 - Connectivity and network monitoring
 
 ## :hammer_and_wrench: Support

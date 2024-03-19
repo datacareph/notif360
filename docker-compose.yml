@@ -1,0 +1,72 @@
+version: '3.9'
+
+services:
+  # Nginx example service
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - "$WWW_PROJECT_DIR:/opt/datacareph/www"
+    networks:
+      - internal-network
+
+  # Notif360
+  notif360:
+    build:
+      args:
+        uid: 1000 # id -u
+        gid: 1001 # id -g
+      context: ./
+      dockerfile: ./notif360.Dockerfile
+    command: /bin/sh -c "
+      chown root:1001 /etc/crontabs/root &&
+      crond -f"
+    image: alpine3.19.1-notif360:locally
+    networks:
+      - internal-network
+    volumes:
+      - "./notif360/20-scheduler:/etc/crontabs/root"
+      - "./notif360:/opt/datacareph/notif360"
+      - "$WWW_PROJECT_DIR:/opt/datacareph/www" # Replace $WWW_PROJECT_DIR
+    labels:
+      - "traefik.enable=false"
+     environment:
+      # You can leave these default values
+      - SKIP_SYSTEM_CHECK=no
+      - FORCE_SEND_NOTIFICATION=no
+      - PARTIAL_SYSTEM_CHECK=no
+      - CHECK_TARGET_DIRECTORIES="/home/ /var/www/ /opt/"
+      - TARGET_DIR_MAX_SIZE="1024"
+      - MAX_KEEP_LOGS=5
+      - DISK_THRESHOLD=85
+      - MEMORY_THRESHOLD=75
+      - CPU_THRESHOLD=70
+      - DOMAINS_TO_CHECK="google.com cloudflare.com"
+      - URLS_TO_SCAN="https://www.google.com/ https://www.cloudflare.com/"
+      - VIRUSTOTAL_API_KEY=""
+      - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABCDEFGHIJKLMNOPQRSTUV/sample91sQyob9j5eNAuceio
+      - SMTP_SERVER=mx1.your-smtp.com
+      - SMTP_USERNAME=your-username@your-website.com
+      - SMTP_PASSWORD=S3cureP4sw0rd
+      # You can leave these default values
+      - SMTP_PORT=587
+      - USE_SSL=false
+      - REQUEST_TIMEOUT=30
+      - MAX_TRIES=3
+      - MAX_TRIES_INTERVAL=5
+      - SEND_COMMANDS_DELAY=3
+      - SENDER_NAME="Notifications DataCarePh"
+      - SENDER_EMAIL=""
+      - RECEIVER_NAME="There"
+      - RECEIVER_EMAIL="your-email@gmail.com"
+      - CARBON_COPY="carbon.copy1@gmail.com carbon.copy2@gmail.com"
+      - CARBON_COPY_FULL="Carbon Copy 1 <carbon.copy1@gmail.com>, Carbon Copy 2 <carbon.copy2@gmail.com>"
+      - EMAIL_SUBJECT="Scheduled Notification - Client Service Status"
+      - COMPANY_ADDRESS="Iloilo, 5000, Philippines"
+      - UNSUBSCRIBE_URL="https://www.your-website.co/?email=unsubscribe&verify=true"
+      - PREHEADER_TEXT="You have received a scheduled notification. Please do not reply to this message"
+
+networks:
+  internal-network:
