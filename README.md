@@ -1,6 +1,6 @@
 # Notif360 ![bash](https://img.shields.io/badge/language-bash-green.svg) ![docker](https://img.shields.io/badge/Docker-notif360.Dockerfile-blue)
 
-> Made with love :flag_ph:
+> Made with love ![Philippines](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/ph.png "Philippines")
 
 A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics, website health, and malware scanning.
 
