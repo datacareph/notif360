@@ -47,8 +47,8 @@ nano .env
 You may need the following
 - Domains to check (SSL Check)
 - URLs to check and scan
-- SMTP Credentials. You can use your existing or [contact us](https://www.datacareph.com/contact).
-- SLACK URI Endpoint
+- SMTP Credentials. You can use your existing credentials or [contact us](https://www.datacareph.com/contact).
+- SLACK URL Endpoint
 - VirusTotal. [Get API Key here](https://www.virustotal.com/gui/my-apikey)
 
 ### Test it
