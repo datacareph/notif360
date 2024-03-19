@@ -16,9 +16,9 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### Requirements
 
-There are few requirements that may also available on your current unix system, 'cURL' and 'OpenSSL' installed in your computer system.
+There are few requirements that may also available on your current Unix-like operating system, `cURL` and `OpenSSL` installed in your computer system.
 
-To check if you have 'cURL' and 'OpenSSL' installed, run this command in your terminal:
+To check if you have these requirements installed, run this command in your `CLI`:
 
 ```sh
 openssl version
@@ -48,15 +48,19 @@ You may need the following
 - URLs to check and scan
 
 ### Test it
+> Make sure you have correct values in the `.env` file
 ```sh
 ./run.sh yes no no
 ```
 
 ### Add this into Cronjob
+> You can use `sudo crontab -e` as root privilege
 ```sh
-sudo crontab -e
+crontab -e
 ```
 
+### You can copy and paste these code accordingly
+> Change this `/opt/datacareph/notif360` to the correct path
 ```
 # Monitoring System
 # Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
@@ -114,9 +118,10 @@ git push origin my-amazing-contribution
 ```
 
 4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
+![Create pull request](https://imgur.com/xwkaAzF.png)
 
 or click 'Compare & pull request' see screenshot
-![Flameshot](https://imgur.com/Y4WEad4.png)
+![Compare & pull request](https://imgur.com/Y4WEad4.png)
 
 ## :scroll: License
 

@@ -88,6 +88,4 @@ custom_file.ext
 # Ignore all files and directories named '*-updated'
 *-updated
 
-# Disable pdisk folder
-pdisk/
 
