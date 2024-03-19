@@ -63,8 +63,8 @@ You may need the following
 crontab -e
 ```
 
-### You can copy and paste these code accordingly
-> Change this `/opt/datacareph/notif360` according to your correct path
+### You can copy and paste this code accordingly
+> Update `/opt/datacareph/notif360` with your correct path.
 ```
 # Monitoring System
 # Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
