@@ -2,7 +2,7 @@
 
 > Made with love ![Philippines](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/ph.png "Philippines")
 
-A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics, website health, and malware scanning.
+A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics website health, and malware scanning.
 
 ![Welcome](https://imgur.com/Ci139ot.png)
 
@@ -36,7 +36,7 @@ git clone https://github.com/datacareph/notif360.git
 cd notif360
 ```
 
-### Copy 'env.sample' to '.env' and replace values accordingly
+### Copy `env.sample` to `.env` and replace values accordingly
 
 ```sh
 cd ./notif360/
@@ -117,9 +117,9 @@ Here's the feature-rich functionality that this script can provide.
 - **Extensibility:** Provides extensibility options for adding new monitoring checks or integrating with third-party tools and services.
 
 ## :space_invader: Future
-TO-DO list and additional features
+TO-DO list and additional features:
 - Discord notification integration
-- Connectivity and network monitoring
+- Network monitoring
 
 ## :hammer_and_wrench: Support
 
