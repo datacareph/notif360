@@ -96,19 +96,24 @@ git clone https://github.com/your-username/notif360.git
 cd notif360
 ```
 3. Create a separate branch and push your changes
-
+> You may do this once
 ```sh
 git checkout -b my-amazing-contribution
 # Add your amazing feature
-git status
-git add -A
-git commit -m "Commiting my amazing contribution"
 # Get the token here https://github.com/settings/tokens
 git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
+```
+> This can be repetitive
+```sh
+git fetch origin # optional
+git status # optional
+git checkout my-amazing-contribution # optional
+git add -A
+git commit -m "This is my contribution: Additional feature 1."
 git push origin my-amazing-contribution
 ```
 
-4. Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
+4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
 
 ## :scroll: License
 
