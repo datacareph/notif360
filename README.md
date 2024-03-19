@@ -166,4 +166,4 @@ Or alternatively click 'Compare & pull request' see screenshot
 ## :bookmark: Resources
 - [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
 - [Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
-- [Screenshot App](https://github.com/flameshot-org/flameshot)
+- [Flameshot App](https://github.com/flameshot-org/flameshot) - A screenshot application used in this project.
