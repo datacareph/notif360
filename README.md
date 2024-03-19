@@ -1,4 +1,4 @@
-# Notif360 ![language](https://img.shields.io/badge/language-bash-green.svg)
+# Notif360 ![bash](https://img.shields.io/badge/language-bash-green.svg) ![docker](https://img.shields.io/badge/Docker-notif360.Dockerfile-blue)
 
 > System monitoring and notification
 
