@@ -16,9 +16,9 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### Requirements
 
-Before installing this Readme Generator you need to check if you have `cURL`and `OpenSSL` installed in your computer system.
+There are few requirements that may also available on your current unix system, 'cURL' and 'OpenSSL' installed in your computer system.
 
-To check if you have `cURL` and `OpenSSL` installed, run this command in your terminal:
+To check if you have 'cURL' and 'OpenSSL' installed, run this command in your terminal:
 
 ```sh
 openssl version
@@ -35,6 +35,7 @@ cd notif360
 ### Copy 'env.sample' to '.env' and replace values accordingly
 
 ```sh
+cd ./pdisk/notif360/
 cp env.example .env
 nano .env
 ```
@@ -95,19 +96,27 @@ git clone https://github.com/your-username/notif360.git
 cd notif360
 ```
 3. Create a separate branch and push your changes
-
+> You may do this once
 ```sh
 git checkout -b my-amazing-contribution
 # Add your amazing feature
-git status
-git add -A
-git commit -m "Commiting my amazing contribution"
 # Get the token here https://github.com/settings/tokens
 git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
+```
+> This can be repetitive
+```sh
+git fetch origin # optional
+git status # optional
+git checkout my-amazing-contribution # optional
+git add -A
+git commit -m "This is my contribution: Additional feature 1."
 git push origin my-amazing-contribution
 ```
 
-4. Create Pull Request: Go to your forked repository on GitHub. You should see a message indicating you've pushed a new branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
+4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
+
+or click 'Compare & pull request' see screenshot
+![Flameshot](https://imgur.com/Y4WEad4.png)
 
 ## :scroll: License
 
