@@ -164,6 +164,6 @@ Or alternatively click 'Compare & pull request' see screenshot
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
 
 ## :bookmark: Resources
-[VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
-[Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
-[Screenshot App](https://github.com/flameshot-org/flameshot)
+- [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
+- [Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
+- [Screenshot App](https://github.com/flameshot-org/flameshot)
