@@ -115,6 +115,9 @@ git push origin my-amazing-contribution
 
 4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called 'my-amazing-contribution'. Click the 'Contribute' and 'Open pull request' button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'.
 
+or click 'Compare & pull request' see screenshot
+![Flameshot](https://imgur.com/Y4WEad4.png)
+
 ## :scroll: License
 
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
