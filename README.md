@@ -63,8 +63,8 @@ You may need the following
 crontab -e
 ```
 
-### You can copy and paste these code accordingly
-> Change this `/opt/datacareph/notif360` according to your correct path
+### You can copy and paste this code accordingly
+> Update `/opt/datacareph/notif360` with your correct path.
 ```
 # Monitoring System
 # Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
@@ -166,4 +166,4 @@ Or alternatively click 'Compare & pull request' see screenshot
 ## :bookmark: Resources
 - [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
 - [Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
-- [Screenshot App](https://github.com/flameshot-org/flameshot)
+- [Flameshot App](https://github.com/flameshot-org/flameshot) - A screenshot application used in this project.
