@@ -29,7 +29,7 @@ services:
     volumes:
       - "./notif360/20-scheduler:/etc/crontabs/root"
       - "./notif360:/opt/datacareph/notif360"
-      - "$WWW_PROJECT_DIR:/opt/datacareph/www" # Replace $WWW_PROJECT_DIR
+      - "$WWW_PROJECT_DIR:/opt/datacareph/www" # Replace $WWW_PROJECT_DIR accordingly
     labels:
       - "traefik.enable=false"
      environment:
@@ -46,10 +46,10 @@ services:
       - DOMAINS_TO_CHECK="google.com cloudflare.com"
       - URLS_TO_SCAN="https://www.google.com/ https://www.cloudflare.com/"
       - VIRUSTOTAL_API_KEY=""
-      - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABCDEFGHIJKLMNOPQRSTUV/sample91sQyob9j5eNAuceio
+      - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABCDE012FGH/IJKLMN034/vzPucRp91sQyob9j5eNAuceio
       - SMTP_SERVER=mx1.your-smtp.com
       - SMTP_USERNAME=your-username@your-website.com
-      - SMTP_PASSWORD=S3cureP4sw0rd
+      - SMTP_PASSWORD=MUstS3cure@P4sw0rd&
       # You can leave these default values
       - SMTP_PORT=587
       - USE_SSL=false
