@@ -10,6 +10,7 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 - [Installation](#package-installation)
 - [Usage](#rocket-usage)
+- [Feature](#fireworks-feature)
 - [Future](#space_invader-future)
 - [Support](#hammer_and_wrench-support)
 - [Contributing](#memo-contributing)
@@ -84,10 +85,43 @@ Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/no
 
 We will gradually update this readme file. Stay connected.
 
+## :fireworks: Feature
+Here's the feature-rich functionality that this script can provide.
+
+### System Monitoring
+- **RAM Usage Monitoring:** Tracks memory usage to identify potential issues or bottlenecks.
+- **Disk Space Monitoring:** Monitors available disk space to prevent storage capacity issues.
+- **CPU Performance Monitoring:** Tracks CPU usage to ensure optimal system performance.
+
+### Website Health Checks
+- **Virus Scan:** Conducts regular scans to detect and mitigate any malware or malicious code on websites.
+- **SSL Certificate Check:** Verifies SSL/TLS certificate validity and configuration to ensure secure connections.
+- **Website Uptime Monitoring:** Monitors website availability and responsiveness to prevent downtime.
+
+### Customizable Alerts and Notifications
+- **Alerts for System Metrics:** Sends alerts when system metrics (RAM, disk, CPU) exceed predefined thresholds.
+- **Alerts for Website Health:** Notifies users of website health issues, such as malware detection or SSL certificate expiry.
+- **Notification Customization:** Allows users to customize alert settings, including recipients, notification methods, and threshold values.
+- **Integration with Email and Slack:** Utilizes SMTP for email notifications and Slack webhooks for real-time communication.
+
+### Reporting and Logging
+- **System Reports:** Generates detailed reports on system metrics, website health status, and scan results.
+- **Logging:** Logs all monitoring activities, alerts, and notifications for auditing and troubleshooting purposes.
+
+### Easy Integration and Automation
+- **Simple Configuration:** Provides an easy-to-use configuration interface for setting up monitoring parameters and alert settings.
+- **Automation:** Supports automated scheduling for regular system checks and website scans.
+
+### Open-Source and Extensible
+- **Open-Source:** Licensed under an open-source license, allowing for community contributions and collaboration.
+- **Extensibility:** Provides extensibility options for adding new monitoring checks or integrating with third-party tools and services.
+
+
+
 ## :space_invader: Future
 TO-DO list and additional features
 - Discord notification option
-- Connectivity and Network Check
+- Connectivity and network monitoring
 
 ## :hammer_and_wrench: Support
 
