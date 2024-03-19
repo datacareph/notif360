@@ -15,7 +15,7 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 - [Support](#hammer_and_wrench-support)
 - [Contributing](#memo-contributing)
 - [License](#scroll-license)
-
+- [Resources](#bookmark-resources)
 ## :package: Installation
 
 ### Requirements
@@ -162,3 +162,8 @@ Or alternatively click 'Compare & pull request' see screenshot
 ## :scroll: License
 
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
+
+## :bookmark: Resources
+[VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
+[Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
+[Screenshot App](https://github.com/flameshot-org/flameshot)
