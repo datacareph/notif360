@@ -4,12 +4,13 @@
 
 A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics and website health.
 
-![Welcome](https://imgur.com/a/F6qYOsd.svg)
+![Welcome](https://imgur.com/Ci139ot.png)
 
 ## :books: Table of Contents
 
 - [Installation](#package-installation)
 - [Usage](#rocket-usage)
+- [Future](#space_invader-future)
 - [Support](#hammer_and_wrench-support)
 - [Contributing](#memo-contributing)
 - [License](#scroll-license)
@@ -45,7 +46,7 @@ nano .env
 You may need the following
 - Domains to check (SSL Check)
 - URLs to check and scan
-- SMTP Credentials. You can use your existing or [contact us.](https://www.datacareph.com/contact)
+- SMTP Credentials. You can use your existing or [contact us](https://www.datacareph.com/contact).
 - SLACK URI Endpoint
 - VirusTotal. [Get API Key here](https://www.virustotal.com/gui/my-apikey)
 
@@ -83,9 +84,10 @@ Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/no
 
 We will gradually update this readme file. Stay connected.
 
-### Screenshot with Flameshot
-
-![screencast](https://imgur.com/CeueuNB.png)
+## :space_invader: Future
+TO-DO list and additional features
+- Discord notification option
+- Connectivity and Network Check
 
 ## :hammer_and_wrench: Support
 
@@ -123,7 +125,7 @@ git push origin my-amazing-contribution
 ![Create pull request](https://imgur.com/xwkaAzF.png)
 
 Or alternatively click 'Compare & pull request' see screenshot
-![Compare & pull request](https://imgur.com/Y4WEad4.png)
+![Compare & pull request](https://imgur.com/sOpuIP1.png)
 
 ## :scroll: License
 
