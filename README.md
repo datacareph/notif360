@@ -11,6 +11,7 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 - [Installation](#package-installation)
 - [Usage](#rocket-usage)
 - [Beneficiaries](#family-beneficiaries)
+- [Rationale](#thinking-rationale)
 - [Features](#fireworks-features)
 - [Future](#space_invader-future)
 - [Support](#hammer_and_wrench-support)
@@ -54,7 +55,7 @@ To use the tool, you'll need the following:
 - SLACK URL Endpoint. We're working on providing this. In the meantime, you can search for information on how to obtain it.
 - VirusTotal API Key. You can obtain it [here](https://www.virustotal.com/gui/my-apikey).
 
-Once you have the necessary requirements, there are two methods to use the tool: directly on your `Host Machine` or within a `Docker Container`.
+Once you have the necessary requirements, there are two methods to use the tool: directly on your `Host Machine` or within a `Docker Container`, and you can use either approach.
 
 ### Method 1: Host Machine Installation
 
@@ -85,12 +86,15 @@ crontab -e
 
 ### Method 2: Docker Container Implementation
 
-We are working to make it seamless integration to either new and existing docker container. Check the `docker-compose.yml` file first.
+We are working to seamlessly integrate it with both new and existing Docker containers. Before proceeding, please review the [docker-compose.yml](https://github.com/datacareph/notif360/blob/main/docker-compose.yml) file.
+
 ```sh
 cd /opt/datacareph/notif360
 docker compose up -d
 ```
-It will automatically create a new docker image and spin up the docker container.
+> Replace `$WWW_PROJECT_DIR` with your actual project folder.
+
+This will automatically build a new docker image and spawn up the docker container.
 
 Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/notif360/20-scheduler) in the docker container.
 
@@ -107,6 +111,7 @@ cd /opt/datacareph/notif360
 We will gradually update this readme file. Stay connected.
 
 ## :family: Beneficiaries
+
 - DevOps Teams
 - System Administrators
 - Backend Professionals
@@ -114,10 +119,16 @@ We will gradually update this readme file. Stay connected.
 - Cybersecurity Analysts
 - End-users who rely on secure and reliable websites while browsing the internet.
 
+## :thinking: Rationale
+
+Imagine managing tens or hundreds of `servers`, `containers`, `apps`, and `websites`. Manually checking and maintaining them on an hourly and daily basis is a heavy lift. To ease this burden, we have developed a solution. 
+
 ## :fireworks: Features
+
 Here's the feature-rich functionality that this script can provide.
 
 ### :white_check_mark: System Monitoring
+
 - **RAM Usage Monitoring:** Tracks memory usage to identify potential issues or bottlenecks.
 - **Disk Space Monitoring:** Monitors available disk space to prevent storage capacity issues.
 - **CPU Performance Monitoring:** Tracks CPU usage to ensure optimal system performance.
@@ -140,10 +151,6 @@ Here's the feature-rich functionality that this script can provide.
 ### :white_check_mark: Easy Integration and Automation
 - **Simple Configuration:** Provides an easy-to-use configuration interface for setting up monitoring parameters and alert settings.
 - **Automation:** Supports automated scheduling for regular system checks and website scans.
-
-### :white_check_mark: Open-Source and Extensible
-- **Open-Source:** Licensed under an open-source license, allowing for community contributions and collaboration.
-- **Extensibility:** Provides extensibility options for adding new monitoring checks or integrating with third-party tools and services.
 
 ## :space_invader: Future
 TO-DO list and additional features:
@@ -172,6 +179,7 @@ git checkout -b my-amazing-contribution
 # Get the token here https://github.com/settings/tokens
 git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
 ```
+> Note: Keep your token safe.
 > This can be repetitive based how often you made the update
 ```sh
 git fetch origin # optional. Get the latest update from the origin
