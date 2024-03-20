@@ -23,7 +23,13 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 ### Requirements
 
-There are a few requirements that may already be available on your current Unix-like operating system: `cURL`, `OpenSSL`, and `cronjob`, which need to be present on your computer system.
+There are a few requirements that may already be available on your current Unix-like operating system: 
+
+- `OpenSSL`: Mainly used for SMTP and SSL checks.
+- `cURL`: Used for checking website availability and for `Slack` integration.
+- `crontab`: Used as a scheduler mechanism.
+
+> These requirements are typically present in Unix-like systems such as `Linux` or `macOS`.
 
 To check if you have these components installed, you can run a simple command in your command-line interface (`CLI`):
 
@@ -112,9 +118,9 @@ We will gradually update this readme file. Stay connected.
 
 ## :family: Beneficiaries
 
-- DevOps Teams
 - System Administrators
-- Backend Professionals
+- Backend Developers and Engineers
+- DevOps Teams
 - Blue teams and Defensive Security Professionals
 - Cybersecurity Analysts
 - End-users who rely on secure and reliable websites while browsing the internet.
