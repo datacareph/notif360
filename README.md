@@ -100,7 +100,7 @@ docker compose up -d
 ```
 > Replace `$WWW_PROJECT_DIR` with your actual project folder.
 
-This will automatically build a new docker image and spawn up the docker container.
+This will automatically build a new `Docker image` of approximately `15MB` and spawn the `Docker container`.
 
 Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/notif360/20-scheduler) in the docker container.
 
@@ -108,13 +108,13 @@ Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/no
 
 > Make sure you have correct values in the `.env` file
 ```sh
-cd /opt/datacareph/notif360
+cd /opt/datacareph/notif360/notif360
 ./run.sh yes no no
 ```
 
 ### Tips
 
-We will gradually update this readme file. Stay connected.
+We will gradually update this readme file. Stay connected!
 
 ## :family: Beneficiaries
 
@@ -127,7 +127,7 @@ We will gradually update this readme file. Stay connected.
 
 ## :thinking: Rationale
 
-Imagine managing tens or hundreds of `servers`, `containers`, `apps`, and `websites`. Manually checking and maintaining them on an hourly and daily basis is a heavy lift. To ease this burden, we have developed a solution. 
+Imagine managing tens or hundreds of `servers`, `containers`, `apps`, and `websites`. Manually checking and maintaining them on an hourly and daily basis is a heavy lift. To ease this burden, we have developed a solution. While there may be similar or existing tools available, they often consume considerable resources and can introduce vulnerabilities by exposing APIs.
 
 ## :fireworks: Features
 
