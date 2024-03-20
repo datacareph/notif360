@@ -1,14 +1,16 @@
 version: '3.9'
 
 services:
+  # YOU CAN KEEP OR ADD YOUR EXISTING SERVICES HERE!
   # Nginx example service
+  # You can remove this nginx service
   nginx:
     image: nginx:latest
     ports:
       - "8080:80"
       - "8443:443"
     volumes:
-      - "$WWW_PROJECT_DIR:/opt/datacareph/www"
+      - "$WWW_PROJECT_DIR:/usr/share/nginx/html" # Replace it with the actual path
     networks:
       - internal-network
 
@@ -16,8 +18,8 @@ services:
   notif360:
     build:
       args:
-        uid: 1000 # id -u
-        gid: 1001 # id -g
+        uid: 1000 # echo $(id -u)
+        gid: 1001 # echo $(id -g)
       context: ./
       dockerfile: ./notif360.Dockerfile
     command: /bin/sh -c "
@@ -29,7 +31,7 @@ services:
     volumes:
       - "./notif360/20-scheduler:/etc/crontabs/root"
       - "./notif360:/opt/datacareph/notif360"
-      - "$WWW_PROJECT_DIR:/opt/datacareph/www" # Replace $WWW_PROJECT_DIR accordingly
+      - "$WWW_PROJECT_DIR:/usr/share/nginx/html" # Replace it with the actual path
     labels:
       - "traefik.enable=false"
      environment:
