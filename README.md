@@ -1,6 +1,6 @@
 # Notif360 ![bash](https://img.shields.io/badge/language-bash-green.svg) ![docker](https://img.shields.io/badge/Docker-notif360.Dockerfile-blue)
 
-> Made with love ![Philippines](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/ph.png "Philippines")
+> Made with love :philippines:
 
 A `simple` :zap: and lightweight system monitoring and notification tool designed to provide comprehensive insight of critical system metrics website health, and malware scanning.
 
@@ -10,17 +10,19 @@ A `simple` :zap: and lightweight system monitoring and notification tool designe
 
 - [Installation](#package-installation)
 - [Usage](#rocket-usage)
+- [Beneficiaries](#family-beneficiaries)
 - [Features](#fireworks-features)
 - [Future](#space_invader-future)
 - [Support](#hammer_and_wrench-support)
 - [Contributing](#memo-contributing)
 - [License](#scroll-license)
 - [Resources](#bookmark-resources)
+
 ## :package: Installation
 
 ### Requirements
 
-There are a few requirements that may already be available on your current Unix-like operating system: `cURL` and `OpenSSL`, which need to be present on your computer system.
+There are a few requirements that may already be available on your current Unix-like operating system: `cURL`, `OpenSSL`, and `cronjob`, which need to be present on your computer system.
 
 To check if you have these components installed, you can run a simple command in your command-line interface (`CLI`):
 
@@ -30,60 +32,87 @@ curl --version
 ```
 
 ## :rocket: Usage
-
+Create project folder and download the updated copy
 ```sh
+mkdir -p /opt/datacareph
+cd /opt/datacareph
 git clone https://github.com/datacareph/notif360.git
-cd notif360
 ```
 
-### Copy `env.sample` to `.env` and replace values accordingly
+#### Copy `env.sample` to `.env` and replace values accordingly
 
 ```sh
-cd ./notif360/
+cd notif360/notif360/
 cp env.example .env
-nano .env
+nano .env # use your favorite editor
 ```
 
-You may need the following
-- Domains to check (SSL Check)
+To use the tool, you'll need the following:
+- Domains to check (for SSL validation)
 - URLs to check and scan
-- SMTP Credentials. You can use your existing credentials or [contact us](https://www.datacareph.com/contact).
-- SLACK URL Endpoint
-- VirusTotal. [Get API Key here](https://www.virustotal.com/gui/my-apikey)
+- SMTP Credentials. You can either use your existing credentials or [contact us](https://www.datacareph.com/contact) for assistance
+- SLACK URL Endpoint. We're working on providing this. In the meantime, you can search for information on how to obtain it.
+- VirusTotal API Key. You can obtain it [here](https://www.virustotal.com/gui/my-apikey).
 
-### Test it
-> Make sure you have correct values in the `.env` file
-```sh
-./run.sh yes no no
-```
+Once you have the necessary requirements, there are two methods to use the tool: directly on your `Host Machine` or within a `Docker Container`.
 
-### Add this into Cronjob
-> You can use `sudo crontab -e` as root privilege
+### Method 1: Host Machine Installation
+
+1. Edit your cronjob with your preferred editor (e.g., nano):
 ```sh
 crontab -e
 ```
+> You can use `sudo crontab -e` to gain root privileges and avoid file permission issues.
 
-### You can copy and paste this code accordingly
-> Update `/opt/datacareph/notif360` with your correct path.
+2. Add the following code into your cronjob
+
+#### You can copy and paste this code accordingly
+
 ```
-# Monitoring System
+# Notif360 - System monitoring and notification tool.
 # Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
 
 # Full scan with force notification: Run the script every 15 days at 9:00 AM
-0 9 */15 * * /bin/bash /opt/datacareph/notif360/run.sh yes no no
+0 9 */15 * * /bin/bash /opt/datacareph/notif360/notif360/run.sh yes no no
 
 # Website and Malware Scan and Disk check: Run the script every day at 10:00 AM
-0 10 * * * /bin/bash /opt/datacareph/notif360/run.sh no no no
+0 10 * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no no no
 
 # Website Check Only: Run the script every 5 minutes
-*/5 * * * * /bin/bash /opt/datacareph/notif360/run.sh no yes yes
+*/5 * * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no yes yes
 ```
+> Update `/opt/datacareph/notif360/notif360` with your correct path.
+
+### Method 2: Docker Container Implementation
+
+We are working to make it seamless integration to either new and existing docker container. Check the `docker-compose.yml` file first.
+```sh
+cd /opt/datacareph/notif360
+docker compose up -d
+```
+It will automatically create a new docker image and spin up the docker container.
 
 Check these cron [schedules](https://github.com/datacareph/notif360/blob/main/notif360/20-scheduler) in the docker container.
+
+#### Test it!
+
+> Make sure you have correct values in the `.env` file
+```sh
+cd /opt/datacareph/notif360
+./run.sh yes no no
+```
 
 ### Tips
 
 We will gradually update this readme file. Stay connected.
+
+## :family: Beneficiaries
+- DevOps Teams
+- System Administrators
+- Backend Professionals
+- Blue teams and Defensive Security Professionals
+- Cybersecurity Analysts
+- End-users who rely on secure and reliable websites while browsing the internet.
 
 ## :fireworks: Features
 Here's the feature-rich functionality that this script can provide.
@@ -164,6 +193,6 @@ Or alternatively click 'Compare & pull request' see screenshot
 [MIT](LICENSE) © [DataCarePh](https://github.com/datacareph/)
 
 ## :bookmark: Resources
-- [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware
+- [VirusTotal](https://www.virustotal.com/gui/) - Analyse suspicious files, domains, IPs and URLs to detect malware.
 - [Email Deliverability Tool](https://mxtoolbox.com/deliverability) - DKIM, SPF, DMARC, and other email integrity check.
 - [Flameshot App](https://github.com/flameshot-org/flameshot) - A screenshot application used in this project.
