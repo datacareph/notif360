@@ -88,6 +88,8 @@ crontab -e
 # Website Check Only: Run the script every 5 minutes
 */5 * * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no yes yes
 ```
+> `Save`.
+
 > Update `/opt/datacareph/notif360/notif360` with your correct path.
 
 ### Method 2: Docker Container Implementation
@@ -185,8 +187,11 @@ git checkout -b my-amazing-contribution
 # Get the token here https://github.com/settings/tokens
 git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
 ```
+
 > Note: Keep your token safe.
+
 > This can be repetitive based how often you made the update
+
 ```sh
 git fetch origin # optional. Get the latest update from the origin
 git status # optional
