@@ -88,7 +88,7 @@ crontab -e
 # Website Check Only: Run the script every 5 minutes
 */5 * * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no yes yes
 ```
-> `Save`.
+> Save.
 
 > Update `/opt/datacareph/notif360/notif360` with your correct path.
 
@@ -201,7 +201,8 @@ git commit -m "This is my contribution: Additional feature 1."
 git push origin my-amazing-contribution
 ```
 
-4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called `my-amazing-contribution`. Click the `Contribute` and `Open pull request` button to create a pull request. Provide a descriptive title and description of your changes, then click 'Create pull request'. See screenshot
+4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called `my-amazing-contribution`. Click the `Contribute` and `Open pull request` button to create a pull request. Provide a descriptive title and description of your changes, then click `Create pull request`. See screenshot
+
 ![Create pull request](https://imgur.com/xwkaAzF.png)
 
 Or alternatively click 'Compare & pull request' see screenshot
