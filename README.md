@@ -205,7 +205,7 @@ git push origin my-amazing-contribution
 
 ![Create pull request](https://imgur.com/xwkaAzF.png)
 
-Or alternatively click 'Compare & pull request' see screenshot
+Or alternatively click `Compare & pull request` see screenshot
 ![Compare & pull request](https://imgur.com/sOpuIP1.png)
 
 ## :scroll: License
