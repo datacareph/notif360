@@ -31,7 +31,7 @@ There are a few requirements that may already be available on your current Unix-
 
 > These requirements are typically present in Unix-like systems such as `Linux` or `macOS`.
 
-To check if you have these components installed, you can run a simple command in your command-line interface (`CLI`):
+To check if you have these components installed, you can run a simple command in your command-line interface `CLI`:
 
 ```sh
 openssl version
@@ -119,8 +119,8 @@ We will gradually update this readme file. Stay connected!
 ## :family: Beneficiaries
 
 - System Administrators
+- DevOps Engineers managing Docker and Kubernetes deployments
 - Backend Developers and Engineers
-- DevOps Teams
 - Blue teams and Defensive Security Professionals
 - Cybersecurity Analysts
 - End-users who rely on secure and reliable websites while browsing the internet.
