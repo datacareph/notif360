@@ -47,11 +47,11 @@ services:
       - CPU_THRESHOLD=70
       - DOMAINS_TO_CHECK="google.com cloudflare.com"
       - URLS_TO_SCAN="https://www.google.com/ https://www.cloudflare.com/"
-      - VIRUSTOTAL_API_KEY=""
-      - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABCDE012FGH/IJKLMN034/vzPucRp91sQyob9j5eNAuceio
+      - VIRUSTOTAL_API_KEY="<your-virustotal-api-key>"
+      - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/ABCDE012FGH/IJKLMN034/slack-generated-uri-12345678
       - SMTP_SERVER=mx1.your-smtp.com
       - SMTP_USERNAME=your-username@your-website.com
-      - SMTP_PASSWORD=MUstS3cure@P4sw0rd&
+      - SMTP_PASSWORD="<your-secure-password>"
       # You can leave these default values
       - SMTP_PORT=587
       - USE_SSL=false

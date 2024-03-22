@@ -152,10 +152,6 @@ Here's the feature-rich functionality that this script can provide.
 - **Notification Customization:** Allows users to customize alert settings, including recipients, notification methods, and threshold values.
 - **Integration with Email and Slack:** Utilizes SMTP for email notifications and Slack webhooks for real-time communication.
 
-### :white_check_mark: Reporting and Logging
-- **System Reports:** Generates detailed reports on system metrics, website health status, and scan results.
-- **Logging:** Logs all monitoring activities, alerts, and notifications for auditing and troubleshooting purposes.
-
 ### :white_check_mark: Easy Integration and Automation
 - **Simple Configuration:** Provides an easy-to-use configuration interface for setting up monitoring parameters and alert settings.
 - **Automation:** Supports automated scheduling for regular system checks and website scans.
