@@ -169,7 +169,6 @@ main() {
         # echo "*Disk Usage:* $target_dir_usage%"
         # echo "*Total Used Size:* $total_mb_size MiB"
         # echo "*Max Target Dir Size:* $target_dir_max_size MiB"
-        dir_check_combined+=(" ")
     fi
     dir_check_text=$(printf "%s\n" "${dir_check_combined[@]}")
 
@@ -204,13 +203,14 @@ main() {
         fi
 
         final_output+=("$dir_check_text")
+        final_output+=("")
 
         if [[ "$partial_system_check" != "yes" ]]; then
             final_output+=("*_DISK SYSTEM:_*")
             final_output+=("*Disk Usage:* $disk_usage%")
             final_output+=("$disk_head")
             final_output+=("$disk_content")
-            final_output+=(" ")
+            final_output+=("")
         fi
         # meets the critical status
         is_critical="yes"
