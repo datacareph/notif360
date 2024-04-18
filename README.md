@@ -54,11 +54,16 @@ cp env.example .env
 nano .env # use your favorite editor
 ```
 
-To use the tool, you'll need the following:
+To use the tool, you may need the following:
 - Domains to check (for SSL validation)
 - URLs to check and scan
-- SMTP Credentials. You can either use your existing credentials or [contact us](https://www.datacareph.com/contact) for assistance
-- SLACK URL Endpoint. We're working on providing this. In the meantime, you can search for information on how to obtain it.
+- SMTP Credentials: You can either use your existing credentials or [contact us](https://www.datacareph.com/contact) for assistance
+- SLACK: [URL Endpoint](https://slack.com/oauth/v2/authorize?client_id=6839046088980.6830019825238&scope=incoming-webhook&user_scope=) or Add this to your existing Workspace.
+
+To integrate with Slack, simply click the `Add to Slack` button below:
+
+<a href="https://slack.com/oauth/v2/authorize?client_id=6839046088980.6830019825238&scope=incoming-webhook&user_scope="><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+
 - VirusTotal API Key. You can obtain it [here](https://www.virustotal.com/gui/my-apikey).
 
 Once you have the necessary requirements, there are two methods to use the tool: directly on your `Host Machine` or within a `Docker Container`, and you can use either approach.
@@ -181,7 +186,7 @@ cd notif360
 git checkout -b my-amazing-contribution
 # Add your amazing feature
 # Get the token here https://github.com/settings/tokens
-git remote set-url origin https://your-username:ghp_YourGeneratedTokenypy63uudYz9mtu3iLQah@github.com/your-username/notif360.git
+git remote set-url origin https://your-username:ghp_ReplaceWithYourFineGrainToken@github.com/your-username/notif360.git
 ```
 
 > Note: Keep your token safe.
