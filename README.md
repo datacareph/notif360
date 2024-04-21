@@ -60,7 +60,7 @@ To use the tool, you may need the following:
 - SMTP Credentials: You can either use your existing credentials or [contact us](https://www.datacareph.com/contact) for assistance
 - SLACK: [URL Endpoint](https://slack.com/oauth/v2/authorize?client_id=6839046088980.6830019825238&scope=incoming-webhook&user_scope=) or Add this to your existing Workspace.
 
-To integrate with Slack, simply click the `Add to Slack` button below:
+To integrate with Slack, simply click the `Add to Slack` button below, allow this app to add into your `Workspace` and specific `Channel`, and copy the `Slack Url Endpoint` and paste it to your project `.env` file `SLACK_WEBHOOK_URL`:
 
 <a href="https://slack-notif360-secure.datacareph.com/slack/install"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
 
