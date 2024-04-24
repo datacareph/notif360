@@ -75,10 +75,10 @@ force_send_notif=${2:-"$FORCE_SEND_NOTIFICATION"} # prioritize param
 request_timeout=${REQUEST_TIMEOUT:-10}
 domains_to_check=($domains_to_check) # Convert string to array
 timestamp="$(date +%s)"
+ssl_alert_before=${SSL_ALERT_BEFORE:-1728000} # 20 days (20 days * 24 hours * 60 minutes * 60 seconds = 1296000 seconds).
 
 # Main script execution
 main() {
-
     # Initialize an empty array
     local expiry_date
     local expiry_timestamp
@@ -90,7 +90,7 @@ main() {
     final_output+=("*_SSL CHECK:_*")
 
     local status_report="good"
-    local has_expired="no"
+    local has_alert="no"
 
     # Loop through each URL in the array
     for domain in "${domains_to_check[@]}"; do
@@ -126,8 +126,12 @@ main() {
         if [[ "$expiry_timestamp" -ge "$current_timestamp" ]]; then
             final_output+=("*Summary*: SSL certificate is still valid.")
             final_output+=("*Expiry Date*: $absolute_expiry")
+        elif [[ "$((expiry_timestamp - current_timestamp))" -le "$ssl_alert_before" ]]; then
+            has_alert="yes"
+            final_output+=("*Summary*: Alert! SSL certificate will expire in less than 20 days.")
+            final_output+=("*Expiry Date*: $absolute_expiry")
         else
-            has_expired="yes"
+            has_alert="yes"
             final_output+=("*Summary*: Alert! SSL certificate has expired.")
             final_output+=("*Expiry Date*: $absolute_expiry")
         fi
@@ -147,7 +151,7 @@ main() {
     # Join array elements into a single string with line breaks
     final_output_plain=$(printf "%s\n" "${final_output[@]}")
 
-    if [[ "$has_expired" == "yes" || "$force_send_notif" == "yes" ]]; then
+    if [[ "$has_alert" == "yes" || "$force_send_notif" == "yes" ]]; then
         status_report="$final_output_plain"
     else
         status_report="$status_report"
