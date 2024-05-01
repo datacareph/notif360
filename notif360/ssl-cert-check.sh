@@ -100,7 +100,7 @@ main() {
         openssl_starts=$(date +%s)
 
         # Retrieve certificate expiry date
-        not_after=$(openssl s_client -servername "$domain" -connect "$domain":443 2>/dev/null | openssl x509 -noout -enddate)
+        not_after=$(echo "QUIT" | openssl s_client -servername "$domain" -connect "$domain":443 2>/dev/null | openssl x509 -noout -enddate)
         absolute_expiry=$(echo "$not_after" | cut -d'=' -f2)
         expiry_date=$(echo "$not_after" | awk -F'=' '{print $2}' | awk -F' ' '{print $1, $2, $3, $4}')
         final_output+=("*DOMAIN NAME*: $domain")

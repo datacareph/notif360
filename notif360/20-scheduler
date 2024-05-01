@@ -12,7 +12,7 @@
 # Full scan with force notification: Run the script every 15 days at 9:00 AM
 0 9 */15 * * /bin/bash /opt/datacareph/notif360/run.sh yes no no >> /dev/stdout 2>&1
 
-# Website and Malware Scan and Disk check: Run the script every day at 10:00 AM
+# Website, SSL Check, and Malware Scan and Disk check: Run the script every day at 10:00 AM
 0 10 * * * /bin/bash /opt/datacareph/notif360/run.sh no no no >> /dev/stdout 2>&1
 
 # Website Check Only: Run the script every 5 minutes

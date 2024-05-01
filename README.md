@@ -50,7 +50,7 @@ git clone https://github.com/datacareph/notif360.git
 
 ```sh
 cd notif360/notif360/
-cp env.example .env
+cp sample.env .env
 nano .env # use your favorite editor
 ```
 
