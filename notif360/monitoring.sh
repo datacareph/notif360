@@ -203,15 +203,15 @@ main() {
         fi
 
         final_output+=("$dir_check_text")
-        final_output+=("")
 
         if [[ "$partial_system_check" != "yes" ]]; then
             final_output+=("*_DISK SYSTEM:_*")
             final_output+=("*Disk Usage:* $disk_usage%")
             final_output+=("$disk_head")
             final_output+=("$disk_content")
-            final_output+=("")
         fi
+        final_output+=("")
+        sleep 1
         # meets the critical status
         is_critical="yes"
     fi
