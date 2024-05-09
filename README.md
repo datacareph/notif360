@@ -40,6 +40,7 @@ curl --version
 
 ## :rocket: Usage
 Create project folder and download the updated copy
+> `/opt` directory requires `root` or `sudoer` access by simply by `sudo su` commands.
 ```sh
 mkdir -p /opt/datacareph
 cd /opt/datacareph
@@ -90,8 +91,8 @@ crontab -e
 # Website and Malware Scan and Disk check: Run the script every day at 10:00 AM
 0 10 * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no no no
 
-# Website Check Only: Run the script every 5 minutes
-*/5 * * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no yes yes
+# Website and SSL Check Only: Run the script every 10 minutes
+*/10 * * * * /bin/bash /opt/datacareph/notif360/notif360/run.sh no yes yes
 ```
 > Save.
 
