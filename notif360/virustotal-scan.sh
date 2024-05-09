@@ -5,7 +5,7 @@
 # Author: esstat17
 # Website: datacareph.com
 # Description: Malware scanning for website
-# Usage: ./virustotal-scan.sh <urls_to_scan> <force_send_notif>
+# Usage: ./virustotal-scan.sh <domains_to_check> <force_send_notif>
 ##############################################
 
 set -o pipefail
@@ -24,7 +24,7 @@ failsoexit() {
 
 # Validate input parameters
 if [ "$#" -ne 2 ]; then
-    info "Usage: $0 <urls_to_scan> <force_send_notif>"
+    info "Usage: $0 <domains_to_check> <force_send_notif>"
     exit 1
 fi
 
@@ -78,13 +78,13 @@ fi
 # Virus Total
 debug=${DEBUG:-"false"}
 virustotal_api_key=${VIRUSTOTAL_API_KEY:-"YOUR-VIRUSTOTAL-API_KEY_OR_TOKEN"} # Get from virustotal
-urls_to_scan=${1:-"$URLS_TO_SCAN"} # Separated by spaces e.g. "https://google.com https://yahoo.com"
+domains_to_check=${1:-"$DOMAINS_TO_CHECK"} # Separated by spaces e.g. "https://google.com https://yahoo.com"
 force_send_notif=${2:-"$FORCE_SEND_NOTIFICATION"} # prioritize param
-urls_to_scan=($urls_to_scan) # Convert string to array
+domains_to_check=($domains_to_check) # Convert string to array
 request_timeout=${REQUEST_TIMEOUT:-10}
 timestamp="$(date +%s)"
 # DEBUG
-# for url in "${urls_to_scan[@]}"; do
+# for url in "${domains_to_check[@]}"; do
 #     echo "$url"
 # done
 # exit 1
@@ -99,7 +99,7 @@ main() {
   is_detected="no"
 
   # Loop through each URL in the array
-  for url in "${urls_to_scan[@]}"; do
+  for url in "${domains_to_check[@]}"; do
 
     if [[ "$debug" != "true" ]]; then
     # Submit a URL for scanning
@@ -158,21 +158,21 @@ EOF
         --url "https://www.virustotal.com/api/v3/analyses/$id" \
         --max-time "$request_timeout" \
         --header "x-apikey: $virustotal_api_key")
-    else
-      # DEBUG
-      # Hard-coded analysis response
-      analysis_response='{
-          "data": {
-              "status": "completed",
-              "stats": {
-                  "malicious": 0,
-                  "suspicious": 0,
-                  "undetected": 20,
-                  "harmless": 71,
-                  "timeout": 0
-              }
-          }
-      }'
+    #else
+    #  # DEBUG
+    #  # Hard-coded analysis response
+    #  analysis_response='{
+    #      "data": {
+    #          "status": "completed",
+    #          "stats": {
+    #              "malicious": 0,
+    #              "suspicious": 0,
+    #              "undetected": 20,
+    #              "harmless": 71,
+    #              "timeout": 0
+    #          }
+    #      }
+    #  }'
     fi
 
     # DEBUG

@@ -15,5 +15,5 @@
 # Website, SSL Check, and Malware Scan and Disk check: Run the script every day at 10:00 AM
 0 10 * * * /bin/bash /opt/datacareph/notif360/run.sh no no no >> /dev/stdout 2>&1
 
-# Website Check Only: Run the script every 5 minutes
-*/5 * * * * /bin/bash /opt/datacareph/notif360/run.sh no yes yes >> /dev/stdout 2>&1
+# Website and SSL Check Only: Run the script every 10 minutes
+*/10 * * * * /bin/bash /opt/datacareph/notif360/run.sh no yes yes >> /dev/stdout 2>&1

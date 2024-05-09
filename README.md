@@ -40,19 +40,21 @@ curl --version
 
 ## :rocket: Usage
 Create project folder and download the updated copy
-> `/opt` directory requires `root` or `sudoer` access by simply by `sudo su` commands.
+> `/opt` directory requires `root` or `sudoer` superuser privileges.
+> Optionally, you can replace the path `/opt/datacareph` according to your project folder.
+
 ```sh
-mkdir -p /opt/datacareph
+sudo mkdir -p /opt/datacareph
 cd /opt/datacareph
-git clone https://github.com/datacareph/notif360.git
+sudo git clone https://github.com/datacareph/notif360.git
 ```
 
 #### Copy `env.sample` to `.env` and replace values accordingly
 
 ```sh
 cd notif360/notif360/
-cp sample.env .env
-nano .env # use your favorite editor
+sudo cp sample.env .env
+sudo nano .env # use your preferred editor
 ```
 
 To use the tool, you may need the following:
@@ -73,9 +75,8 @@ Once you have the necessary requirements, there are two methods to use the tool:
 
 1. Edit your cronjob with your preferred editor (e.g., nano):
 ```sh
-crontab -e
+sudo crontab -e
 ```
-> You can use `sudo crontab -e` to gain root privileges and avoid file permission issues.
 
 2. Add the following code into your cronjob
 

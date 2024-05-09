@@ -3,7 +3,7 @@
 ##############################################
 # Main Script
 # Author: esstat17
-# Website: https://datacareph.com/
+# Website: https://datacareph.com
 # Description: The main script to handle SEIM and notifications
 # Usage: ./run.sh <force_send_notif> <skip_system_check> <skip_virustotal_scan>
 ##############################################
@@ -91,6 +91,7 @@ virustotal_api_key=${VIRUSTOTAL_API_KEY:-""} # Get from virustotal
 urls_to_scan=${URLS_TO_SCAN:-""}
 domains_to_check=${DOMAINS_TO_CHECK:-""} # SSL Cert Check
 request_timeout=${REQUEST_TIMEOUT:-10}
+debug=${DEBUG:-"false"}
 
 # Local vars
 timestamp="$(date '+%b-%d-%Y_%H-%M-%S')" # $(date '+%b-%d-%Y')
@@ -154,6 +155,7 @@ else
 fi
 
 if [[ "$skip_system_check" != "yes" ]]; then
+    sleep 1
     # Capture message from monitoring.sh
     info "Working System Reports." | tee -a "$log_file"
     status_report=$("$current_working_dir/monitoring.sh" "$memory_threshold" "$cpu_threshold" "$disk_threshold" "$check_target_directories" "$target_dir_max_size" "$partial_system_check" "$force_send_notif" "$domains_to_check" 2>/dev/null | \
@@ -170,11 +172,11 @@ else
 fi
 
 # VirusTotal Scan
-if [[ -n "$virustotal_api_key" && -n "$urls_to_scan" && "$skip_virustotal_scan" != "yes" ]]; then
+if [[ -n "$virustotal_api_key" && -n "$domains_to_check" && "$skip_virustotal_scan" != "yes" ]]; then
     sleep 1
      # Virus total scan script
     info "Malware scanning: via VirusTotal API" | tee -a "$log_file"
-    status_report=$("$current_working_dir/virustotal-scan.sh" "$urls_to_scan" "$force_send_notif" 2>/dev/null | \
+    status_report=$("$current_working_dir/virustotal-scan.sh" "$domains_to_check" "$force_send_notif" 2>/dev/null | \
     tee -a "$log_file" \
     || fail "Fail to run: virustotal-scan.sh")
     
@@ -191,12 +193,13 @@ fi
 final_text_output=$(printf "%s\n" "${final_status[@]}")
 
 # DEBUG
-# echo "Force Send Notif: $force_send_notif"
-# echo "Status Report: $status_report"
-# echo "Current State: $current_state"
-# final_text_output=$(printf "%s\n" "${final_status[@]}")
-# echo "Final Text Output: $final_text_output"
-# exit 1
+if [[ "$debug" == "true" ]]; then
+    echo "Force Send Notif: $force_send_notif"
+    # echo "Status Report: $status_report"
+    # echo "Current State: $current_state"
+    echo "Final Text Output: $final_text_output"
+    # exit 1
+fi
 
 # Via Slack
 if [[ -n "$slack_webhook_url" && ( "$current_state" != "good" || "$force_send_notif" == "yes" ) ]]; then
