@@ -226,7 +226,7 @@ send_commands() {
     echo -e "AUTH LOGIN"
     echo -e "$(echo -ne "$smtp_username" | base64)"
     echo -e "$(echo -ne "$smtp_password" | base64)"
-    
+
     echo -e "MAIL FROM: <$sender_or_smtp_email>"
     echo -e "RCPT TO: <$receiver_email>"
 
@@ -237,7 +237,7 @@ send_commands() {
             sleep 1
         done
     fi
-    
+
     echo -e "DATA"
     sleep $send_commands_delay  # Add a delay after the DATA command
     echo -e "$message"

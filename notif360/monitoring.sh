@@ -205,6 +205,7 @@ main() {
         final_output+=("$dir_check_text")
 
         if [[ "$partial_system_check" != "yes" ]]; then
+            final_output+=("")
             final_output+=("*_DISK SYSTEM:_*")
             final_output+=("*Disk Usage:* $disk_usage%")
             final_output+=("$disk_head")
