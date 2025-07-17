@@ -185,10 +185,10 @@ cd notif360
 3. Create a separate branch and push your changes
 > You may do this once
 ```sh
-git checkout -b my-amazing-contribution
+git checkout -b My-Amazing-Contribution
 # Add your amazing feature
 # Get the token here https://github.com/settings/tokens
-git remote set-url origin https://your-username:ghp_ReplaceWithYourFineGrainToken@github.com/your-username/notif360.git
+git remote set-url origin https://USERNAME:REPLACE_WITH_YOUR_FINE_GRAIN_TOKEN@github.com/USERNAME/notif360.git
 ```
 
 > Note: Keep your token safe.
@@ -198,9 +198,9 @@ git remote set-url origin https://your-username:ghp_ReplaceWithYourFineGrainToke
 ```sh
 git fetch origin # optional. Get the latest update from the origin
 git status # optional
-git checkout my-amazing-contribution # optional
+git checkout My-Amazing-Contribution # optional 
 git add -A
-git commit -m "This is my contribution: Additional feature 1."
+git commit -m "This is my contribution: Additional feature 1." 
 git push origin my-amazing-contribution
 ```
 
