@@ -40,21 +40,19 @@ curl --version
 
 ## :rocket: Usage
 Create project folder and download the updated copy
-> `/opt` directory requires `root` or `sudoer` superuser privileges.
-> Optionally, you can replace the path `/opt/datacareph` according to your project folder.
-
+> `/opt` directory requires `root` or `sudoer` access by simply by `sudo su` commands.
 ```sh
-sudo mkdir -p /opt/datacareph
+mkdir -p /opt/datacareph
 cd /opt/datacareph
-sudo git clone https://github.com/datacareph/notif360.git
+git clone https://github.com/datacareph/notif360.git
 ```
 
 #### Copy `env.sample` to `.env` and replace values accordingly
 
 ```sh
 cd notif360/notif360/
-sudo cp sample.env .env
-sudo nano .env # use your preferred editor
+cp sample.env .env
+nano .env # use your favorite editor
 ```
 
 To use the tool, you may need the following:
@@ -75,8 +73,9 @@ Once you have the necessary requirements, there are two methods to use the tool:
 
 1. Edit your cronjob with your preferred editor (e.g., nano):
 ```sh
-sudo crontab -e
+crontab -e
 ```
+> You can use `sudo crontab -e` to gain root privileges and avoid file permission issues.
 
 2. Add the following code into your cronjob
 
@@ -179,16 +178,16 @@ Contributing to this project is made simple, just follow these steps.
 2. Clone your forked repo and go into that folder
 
 ```sh
-git clone https://github.com/your-username/notif360.git
+git clone https://github.com/YOUR_USERNAME/notif360.git
 cd notif360
 ```
 3. Create a separate branch and push your changes
 > You may do this once
 ```sh
-git checkout -b My-Amazing-Contribution
+git checkout -b my-amazing-contribution
 # Add your amazing feature
 # Get the token here https://github.com/settings/tokens
-git remote set-url origin https://USERNAME:REPLACE_WITH_YOUR_FINE_GRAIN_TOKEN@github.com/USERNAME/notif360.git
+git remote set-url origin https://YOUR_USERNAME:REPLACE_WITH_YOUR_FINE_GRAIN_TOKEN@github.com/YOUR_USERNAME/notif360.git
 ```
 
 > Note: Keep your token safe.
