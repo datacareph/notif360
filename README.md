@@ -204,10 +204,6 @@ git commit -m "Add: My amazing feature."
 git push origin my-amazing-feature-1
 ```
 
-6️⃣ Open a Pull Request
-Go to your fork on GitHub → Switch to my-amazing-feature-1 branch → Click "Compare & pull request".
-Submit it to the original repo's main branch.
-
 > Note: On first push, Git will ask:
 Username: YOUR_USERNAME
 Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
@@ -216,7 +212,10 @@ Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
 
 > This can be repetitive based how often you made the update
 
-4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called `my-amazing-contribution`. Click the `Contribute` and `Open pull request` button to create a pull request. Provide a descriptive title and description of your changes, then click `Create pull request`. See screenshot
+6️⃣ Open a Pull Request
+Go to your forked repository on GitHub → Switch to my-amazing-feature-1 branch → Click Contribute → Open pull request.
+
+Submit it to the original repo's main branch.
 
 ![Create pull request](https://imgur.com/xwkaAzF.png)
 
