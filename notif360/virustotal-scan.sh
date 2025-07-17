@@ -92,7 +92,7 @@ timestamp="$(date +%s)"
 # Main script execution
 main() {
   # Initialize an empty array
-  final_output=() # init
+  final_output=("") # init
   final_output+=("*MALWARE STATUS REPORT:* ID-$timestamp")
   final_output+=("*_VIRUSTOTAL SCAN:_*")
   status_report="good"
@@ -139,7 +139,10 @@ EOF
 
     # The first one works as well
     # id=$(echo "$request_scan" | grep -o '"id": "[^"]*' | grep -o '[^"]*$') || id=-1
-    id=$(echo "$request_scan" | sed -n 's/.*"id": "\(.*\)".*/\1/p') || id=-1
+    # claude.ai id=$(echo "$request_scan" | sed -n 's/.*"id": "\([^"]*\)",.*"links".*/\1/p') || id=-1
+    # claude.ai id=$(echo "$request_scan" | sed -n 's/.*"id": "\([^"]*\)".*/\1/p') || id=-1
+  
+    id=$(echo "$request_scan" | sed -n 's/.*"id"[ ]*:[ ]*"\([^"]*\)".*/\1/p') || id=-1
 
     # DEBUG
     # echo "REQUEST ID: xxX${id}Xxx"
