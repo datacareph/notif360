@@ -174,34 +174,39 @@ Please [open an issue](https://github.com/datacareph/notif360/issues/new) for su
 ## :memo: Contributing
 
 Contributing to this project is made simple, just follow these steps.
-1. Fork the Repository under your GitHub account.
-2. Clone your forked repo and go into that folder
 
+1️⃣ Fork this repository under your GitHub account.
+
+2️⃣ Clone your fork:
 ```sh
 git clone https://github.com/YOUR_USERNAME/notif360.git
 cd notif360
 ```
-3. Create a separate branch and push your changes
-> You may do this once
+
+3️⃣ Create a branch:
 ```sh
-git checkout -b my-amazing-contribution
-# Add your amazing feature
-# Get the token here https://github.com/settings/tokens
-git remote set-url origin https://YOUR_USERNAME:REPLACE_WITH_YOUR_FINE_GRAIN_TOKEN@github.com/YOUR_USERNAME/notif360.git
+git checkout -b my-amazing-feature-1
 ```
 
-> Note: Keep your token safe.
+4️⃣ Make your changes.
+```sh
+git status # make file changes
+git add -A  
+git commit -m "Add: My amazing feature."
+```
+
+5️⃣ Push to your fork:
+```sh
+git push origin my-amazing-feature-1
+`
+
+> Note: On first push, Git will ask:
+Username: YOUR_USERNAME
+Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
+
+> Keep your token safe.
 
 > This can be repetitive based how often you made the update
-
-```sh
-git fetch origin # optional. Get the latest update from the origin
-git status # optional
-git checkout My-Amazing-Contribution # optional 
-git add -A
-git commit -m "This is my contribution: Additional feature 1." 
-git push origin my-amazing-contribution
-```
 
 4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called `my-amazing-contribution`. Click the `Contribute` and `Open pull request` button to create a pull request. Provide a descriptive title and description of your changes, then click `Create pull request`. See screenshot
 
