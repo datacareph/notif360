@@ -213,7 +213,7 @@ Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
 > This can be repetitive based how often you made the update
 
 6️⃣ Open a Pull Request
-Go to your forked repository on GitHub → Switch to my-amazing-feature-1 branch → Click "Compare & pull request".
+Go to your forked repository on GitHub → Switch to my-amazing-feature-1 branch → Click Contribute → Open pull request.
 
 Submit it to the original repo's main branch.
 
