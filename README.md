@@ -208,15 +208,6 @@ Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
 
 > This can be repetitive based how often you made the update
 
-```sh
-git fetch origin # optional. Get the latest update from the origin
-git status # optional
-git checkout My-Amazing-Contribution # optional 
-git add -A
-git commit -m "This is my contribution: Additional feature 1." 
-git push origin my-amazing-contribution
-```
-
 4. Create Pull Request: Go to your forked repository on GitHub. You should now able to select the newly created branch called `my-amazing-contribution`. Click the `Contribute` and `Open pull request` button to create a pull request. Provide a descriptive title and description of your changes, then click `Create pull request`. See screenshot
 
 ![Create pull request](https://imgur.com/xwkaAzF.png)
