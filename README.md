@@ -205,6 +205,7 @@ git push origin my-amazing-feature-1
 ```
 
 > Note: On first push, Git will ask:
+
 Username: YOUR_USERNAME
 Password: PASTE YOUR PERSONAL ACCESS TOKEN HERE
 
