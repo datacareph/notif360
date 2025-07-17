@@ -182,8 +182,8 @@ Contributing to this project is made simple, just follow these steps.
 git clone https://github.com/YOUR_USERNAME/notif360.git
 cd notif360
 
-git checkout main # skip for newly cloned
-git pull origin main # skip for newly cloned
+git checkout main # Only needed later, not for a fresh clone
+git pull origin main # Only needed later, not for a fresh clone
 ```
 
 3️⃣ Create a branch:
@@ -193,8 +193,9 @@ git checkout -b my-amazing-feature-1
 
 4️⃣ Make your changes.
 ```sh
-git status # make file changes
-git add -A  
+# Check current status
+git status
+git add -A 
 git commit -m "Add: My amazing feature."
 ```
 
@@ -202,6 +203,10 @@ git commit -m "Add: My amazing feature."
 ```sh
 git push origin my-amazing-feature-1
 ```
+
+6️⃣ Open a Pull Request
+Go to your fork on GitHub → Switch to my-amazing-feature-1 branch → Click "Compare & pull request".
+Submit it to the original repo's main branch.
 
 > Note: On first push, Git will ask:
 Username: YOUR_USERNAME
